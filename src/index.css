@@ -1,1 +1,134 @@
 @import 'tailwindcss';
+
+/* Dark mode follows the data-theme attribute on <html>, set by ThemeProvider. */
+@custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
+
+/* Design tokens. Orange (accent) = action, purple (signal) = trust boundary / highlights. */
+:root {
+  --bg: #f5f3f8;
+  --surface: #ffffff;
+  --fg: #130f1c;
+  --muted: #5f5872;
+  --line: #dfd9e8;
+  --accent: #ff5a1f;
+  --accent-text: #d94300;
+  --accent-ink: #170902;
+  --signal: #9b2cff;
+  --signal-soft: #f0e2ff;
+  --on-vivid: #ffffff;
+  --blob-a: rgba(155, 44, 255, 0.14);
+  --blob-b: rgba(255, 90, 31, 0.16);
+  --glow: 0 0 0 transparent;
+  --glass: rgba(245, 243, 248, 0.8);
+}
+
+:root[data-theme='dark'] {
+  --bg: #0a0811;
+  --surface: #14101f;
+  --fg: #f2eff8;
+  --muted: #a49cb8;
+  --line: #2a2339;
+  --accent: #ff6b1a;
+  --accent-text: #ff8a3d;
+  --signal: #c25bff;
+  --signal-soft: #2b1542;
+  --blob-a: rgba(194, 91, 255, 0.24);
+  --blob-b: rgba(255, 107, 26, 0.2);
+  --glow: 0 0 28px rgba(255, 107, 26, 0.45);
+  --glass: rgba(10, 8, 17, 0.78);
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-text: var(--accent-text);
+  --color-accent-ink: var(--accent-ink);
+  --color-signal: var(--signal);
+  --color-signal-soft: var(--signal-soft);
+  --color-on-vivid: var(--on-vivid);
+  --color-ink: #130f1c;
+  --color-ok: #2ba36b;
+  --color-glass: var(--glass);
+  --color-blob-a: var(--blob-a);
+  --color-blob-b: var(--blob-b);
+  --shadow-glow: var(--glow);
+}
+
+@theme {
+  --font-display: 'Archivo', 'Arial Narrow', system-ui, sans-serif;
+  --font-body: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+
+  /* Breakpoints match the original design (min-width). */
+  --breakpoint-xs: 32.5rem; /* 520px */
+  --breakpoint-sm: 40rem; /* 640px */
+  --breakpoint-md: 47.5rem; /* 760px */
+  --breakpoint-lg: 53.75rem; /* 860px */
+  --breakpoint-xl: 60rem; /* 960px */
+
+  --animate-ring: ring 2s ease-out infinite;
+  @keyframes ring {
+    from { transform: scale(0.6); opacity: 0.6; }
+    to { transform: scale(1.8); opacity: 0; }
+  }
+}
+
+/* Archivo width axis: wdth-104, wdth-122, ... */
+@utility wdth-* {
+  font-variation-settings: 'wdth' --value(integer);
+}
+
+/* Side padding that respects notches. */
+@utility gutter {
+  padding-left: max(20px, env(safe-area-inset-left, 0px));
+  padding-right: max(20px, env(safe-area-inset-right, 0px));
+}
+
+@utility text-gradient {
+  background: linear-gradient(90deg, var(--accent), var(--signal));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@layer base {
+  :root {
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-bg text-fg font-body text-base leading-[1.65] antialiased overflow-x-hidden;
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0 0 auto;
+    height: env(safe-area-inset-top, 0px);
+    z-index: 60;
+    background: var(--bg);
+  }
+  a {
+    @apply text-accent-text underline-offset-3;
+  }
+  a:focus-visible,
+  button:focus-visible {
+    @apply outline-2 outline-offset-3 outline-signal rounded-sm;
+  }
+  h1, h2, h3 {
+    text-wrap: balance;
+  }
+  code {
+    @apply font-mono text-[0.86em] bg-bg border border-line px-[5px] py-px rounded-sm;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
+}
