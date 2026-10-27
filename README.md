@@ -1,17 +1,41 @@
 # Joel Figueiras — personal website
 
-Static site: HTML + CSS + vanilla JS, animations with GSAP (loaded from CDN).
+Personal site built with React, TypeScript, Vite and Tailwind CSS v4. Animations with GSAP.
 
-## Structure
-- `index.html` — page markup, English text
-- `assets/css/style.css` — design tokens (light/dark) and styles
-- `assets/js/i18n.js` — Portuguese translations (`data-i18n` keys)
-- `assets/js/main.js` — theme toggle, language toggle, GSAP animations
-- `assets/img/joel.jpg` — portrait
+Live at **https://jpmfigueiras.github.io**
 
 ## Run locally
-Open the folder in VS Code and use the **Live Server** extension (right-click `index.html` → Open with Live Server).
 
-## Adding text
-1. Add `data-i18n="section.key"` to the element in `index.html` (English text inside).
-2. Add the same key with the Portuguese text in `assets/js/i18n.js`.
+```bash
+npm install
+npm run dev       # http://localhost:5173
+npm run build     # production build in dist/
+npm run preview   # serve the production build
+```
+
+## Structure
+
+```
+src/
+├── pages/            # Page components (Home)
+├── components/
+│   ├── layout/       # Header, Footer, ProgressBar
+│   ├── sections/     # Hero, About, Architecture, Work, Experience, Education, Contact
+│   └── ui/           # Reusable pieces: Button, Section, Timeline, Counter, toggles…
+├── context/          # Theme (light/dark) and language (EN/PT) providers
+├── i18n/             # Typed translations (locales/en.tsx, locales/pt.tsx)
+├── data/             # Non-translated content: links, tech stack, projects, architecture
+├── services/         # Browser helpers: storage, clipboard
+├── hooks/            # Animation and media-query hooks
+└── lib/              # GSAP setup, class-name helper
+```
+
+## Editing content
+
+- **Text** lives in `src/i18n/locales/`. Both files share the `Translation` type, so a missing Portuguese key is a type error.
+- **Links, tags and numbers** live in `src/data/`.
+- **Colours** are CSS variables in `src/index.css` (light in `:root`, dark in `[data-theme='dark']`), exposed to Tailwind as `bg-surface`, `text-accent`, etc.
+
+## Deploy
+
+Every push to `main` builds the site and publishes it to GitHub Pages via `.github/workflows/deploy.yml`.
