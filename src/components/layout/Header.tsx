@@ -9,7 +9,7 @@ export function Header() {
   const [first, last] = site.name.split(' ')
 
   const links = [
-    { href: '#about', label: t.nav.about },
+    { href: '#top', label: t.nav.about },
     { href: '#work', label: t.nav.work },
     { href: '#experience', label: t.nav.experience },
     { href: '#contact', label: t.nav.contact },

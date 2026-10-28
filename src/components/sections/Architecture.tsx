@@ -64,7 +64,7 @@ export function Architecture() {
   })
 
   return (
-    <Section flushTop>
+    <Section>
       <SectionHeader label={t.stack.label} title={t.stack.title} />
 
       <div className="reveal overflow-x-auto rounded-[14px]">

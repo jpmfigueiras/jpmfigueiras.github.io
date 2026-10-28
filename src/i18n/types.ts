@@ -26,8 +26,9 @@ export interface ProjectText {
 
 export interface Translation {
   nav: { about: string; work: string; experience: string; contact: string; language: string; theme: string; main: string }
-  hero: { status: string; lines: [string, string, string]; lede: ReactNode; ctaWork: string; ctaContact: string }
-  about: { label: string; title: string; paragraphs: string[]; facts: [string, string, string]; portraitAlt: string }
+  hero: { status: string; lines: [string, string, string]; tag: string; ctaWork: string; ctaContact: string }
+  /** Shown inside the hero: intro paragraphs (first one is the lead) and the fact labels. */
+  about: { paragraphs: [string, string, string]; facts: [string, string, string]; portraitAlt: string }
   stack: {
     label: string
     title: string

@@ -13,23 +13,15 @@ export const en: Translation = {
   hero: {
     status: 'Available · Braga, PT · UTC+0',
     lines: ['I build', 'shared platforms.', 'Now I secure them.'],
-    lede: (
-      <>
-        Full-stack developer with <strong>3 years as the sole web engineer</strong> of a sports-tech platform used by
-        10+ football clubs. Currently doing an MSc in Cybersecurity, moving toward application security.
-      </>
-    ),
+    tag: 'MSc Cybersecurity · IPVC',
     ctaWork: 'See my work',
     ctaContact: 'Get in touch',
   },
   about: {
-    label: 'About me',
-    title: 'Methodical by trade, curious by nature.',
     paragraphs: [
       "I'm Joel, a full-stack developer from Braga, Portugal. I care about software that holds up under real traffic and real attackers.",
       "I came to software from an unusual place. For five years I inspected vehicles, where you follow the checklist and never approve what you haven't checked. I still work that way.",
       "Since then I've built an Android app from scratch, written C# microservices, and spent three years as the only web developer at PluggableAi, owning everything from the React front end to the Azure deployment. The part I enjoyed most was asking what could go wrong, so I'm now doing a master's in cybersecurity.",
-      'Next, I want to work abroad with people who push me, grow into application security and, in time, security architecture.',
     ],
     facts: ['football clubs on my platform', 'years as sole web developer', 'years inspecting vehicles'],
     portraitAlt: 'Joel Figueiras',

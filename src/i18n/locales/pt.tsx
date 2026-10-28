@@ -13,23 +13,15 @@ export const pt: Translation = {
   hero: {
     status: 'Disponível · Braga, PT · UTC+0',
     lines: ['Construo', 'plataformas partilhadas.', 'Agora protejo-as.'],
-    lede: (
-      <>
-        Developer full-stack com <strong>3 anos como único engenheiro web</strong> de uma plataforma de sports-tech
-        usada por mais de 10 clubes de futebol. A fazer mestrado em Cibersegurança, com foco em segurança aplicacional.
-      </>
-    ),
+    tag: 'Mestrado em Cibersegurança · IPVC',
     ctaWork: 'Ver projetos',
     ctaContact: 'Falar comigo',
   },
   about: {
-    label: 'Sobre mim',
-    title: 'Metódico por profissão, curioso por natureza.',
     paragraphs: [
       'Sou o Joel, developer full-stack de Braga. Interessa-me software que aguenta tráfego real e atacantes reais.',
       'Cheguei ao software por um caminho pouco habitual. Durante cinco anos inspecionei veículos, onde se segue a checklist e nunca se aprova o que não se verificou. Continuo a trabalhar assim.',
       'Desde então criei uma app Android de raiz, escrevi microserviços em C# e passei três anos como único web developer na PluggableAi, responsável por tudo, do front end em React ao deployment na Azure. O que mais gostava era de pensar no que podia correr mal, e por isso estou a fazer um mestrado em cibersegurança.',
-      'O próximo passo é trabalhar no estrangeiro com pessoas que me desafiem, crescer em segurança aplicacional e, mais tarde, em arquitetura de segurança.',
     ],
     facts: ['clubes de futebol na minha plataforma', 'anos como único web developer', 'anos a inspecionar veículos'],
     portraitAlt: 'Joel Figueiras',

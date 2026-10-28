@@ -5,7 +5,8 @@ export const site = {
     linkedin: 'https://www.linkedin.com/in/joel-figueiras',
     github: 'https://github.com/jpmfigueiras',
   },
-  portrait: '/joel.jpg',
+  /** Transparent cutout used in the hero (640×897). joel.jpg stays in public/ for og:image. */
+  cutout: '/joel-cutout.webp',
 }
 
 export const techStack = [
