@@ -12,7 +12,7 @@ export const en: Translation = {
   },
   hero: {
     status: 'Available · Braga, PT · UTC+0',
-    lines: ['I build', 'multi-tenant platforms.', 'Now I secure them.'],
+    lines: ['I build', 'shared platforms.', 'Now I secure them.'],
     lede: (
       <>
         Full-stack developer with <strong>3 years as the sole web engineer</strong> of a sports-tech platform used by

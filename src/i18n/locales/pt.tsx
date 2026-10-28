@@ -12,7 +12,7 @@ export const pt: Translation = {
   },
   hero: {
     status: 'Disponível · Braga, PT · UTC+0',
-    lines: ['Construo', 'plataformas multi-tenant.', 'Agora protejo-as.'],
+    lines: ['Construo', 'plataformas partilhadas.', 'Agora protejo-as.'],
     lede: (
       <>
         Developer full-stack com <strong>3 anos como único engenheiro web</strong> de uma plataforma de sports-tech
