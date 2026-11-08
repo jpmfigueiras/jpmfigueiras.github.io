@@ -62,11 +62,6 @@ export const pt: Translation = {
         title: 'Mobile Logistic — app Android',
         desc: 'App de logística para Android, desenvolvida em Kotlin na Wave Solutions e testada em empresas clientes, com microserviços em C# que também escrevi.',
       },
-      trading: {
-        stat: 'gestão de posição',
-        title: 'Motor de decisão de trading — projeto pessoal',
-        desc: 'Motor modular em Python que apoia decisões de trading sem operar sozinho: fontes de dados intercambiáveis, indicadores, pontuação ponderada de sinais e dimensionamento de posição baseado na volatilidade.',
-      },
     },
   },
   experience: {

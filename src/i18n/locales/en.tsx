@@ -62,11 +62,6 @@ export const en: Translation = {
         title: 'Mobile Logistic — Android app',
         desc: 'A logistics app for Android, written in Kotlin at Wave Solutions and piloted with client companies, backed by microservices I wrote in C#.',
       },
-      trading: {
-        stat: 'position sizing',
-        title: 'Trading decision engine — side project',
-        desc: 'A modular Python engine that supports trading decisions instead of trading on its own: pluggable data sources, indicators, weighted signal scoring and volatility-based position sizing.',
-      },
     },
   },
   experience: {

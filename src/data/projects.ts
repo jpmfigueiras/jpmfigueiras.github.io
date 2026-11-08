@@ -1,4 +1,4 @@
-export type ProjectId = 'fanzone' | 'mobileLogistic' | 'trading'
+export type ProjectId = 'fanzone' | 'mobileLogistic'
 
 export interface Project {
   id: ProjectId
@@ -14,5 +14,4 @@ export const projects: Project[] = [
     tags: ['React', 'TanStack Query', 'Tailwind v4', 'Flask', 'MySQL', 'Redis', 'Azure'],
   },
   { id: 'mobileLogistic', stat: '0→1', tags: ['Kotlin', 'Android', 'C#', 'Microservices'] },
-  { id: 'trading', stat: 'ATR', tags: ['Python', 'Data pipelines'] },
 ]
