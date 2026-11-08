@@ -10,6 +10,8 @@
   --fg: #130f1c;
   --muted: #5f5872;
   --line: #dfd9e8;
+  --line-2: #cec5db;
+  --surface-2: #ebe7f2;
   --accent: #ff5a1f;
   --accent-text: #d94300;
   --accent-ink: #170902;
@@ -28,6 +30,8 @@
   --fg: #f2eff8;
   --muted: #a49cb8;
   --line: #2a2339;
+  --line-2: #3a3150;
+  --surface-2: #231c34;
   --accent: #ff6b1a;
   --accent-text: #ff8a3d;
   --signal: #c25bff;
@@ -45,6 +49,8 @@
   --color-fg: var(--fg);
   --color-muted: var(--muted);
   --color-line: var(--line);
+  --color-line-2: var(--line-2);
+  --color-surface-2: var(--surface-2);
   --color-accent: var(--accent);
   --color-accent-text: var(--accent-text);
   --color-accent-ink: var(--accent-ink);
@@ -103,6 +109,8 @@
   }
   html {
     scroll-behavior: smooth;
+    /* Anchor jumps stop below the floating navbar (14px offset + ~48px capsule). */
+    scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 80px);
   }
   body {
     @apply bg-bg text-fg font-body text-base leading-[1.65] antialiased overflow-x-hidden;

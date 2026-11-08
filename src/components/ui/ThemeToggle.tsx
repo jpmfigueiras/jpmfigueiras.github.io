@@ -13,7 +13,7 @@ export function ThemeToggle() {
       onClick={toggleTheme}
       aria-label={t.nav.theme}
       aria-pressed={theme === 'dark'}
-      className="grid size-9 cursor-pointer place-items-center rounded-full border border-line bg-surface text-fg"
+      className="grid size-[34px] shrink-0 cursor-pointer place-items-center rounded-full border-0 bg-transparent text-fg transition-colors hover:bg-surface-2 focus-visible:outline-accent"
     >
       <Icon className="size-[17px]" />
     </button>
